@@ -2,7 +2,8 @@
 
 This README contains documentation for the main inference script `run.sh` along with some miscellaneous scripts that may be helpful.
 
-> ⚠️ These scripts have been written to be invoked from the root of this codebase (i.e. `./scripts/run.sh`).
+> [!WARNING]
+>  These scripts have been written to be invoked from the root of this codebase (i.e. `./scripts/run.sh`).
 
 ## 🏃 Inference Script
 The `./run.sh` script has been provided as an example of how to invoke `run.py`.
@@ -11,9 +12,10 @@ A single `run.py` call will generate a `trajectory/<username>/<experiment name>`
 
 The following is a comprehensive guide to using the provided `run.py` script, detailing available command-line arguments, their purposes, and default values. Flags that you might find helpful have been marked with a 💡.
 
-The code and explanation of the implementations for *configuration based workflows* are explained in [`agent/`](../agent/README.md).
+The code and explanation of the implementations for *configuration based workflows* are explained in [`agent/`](../sweagent/agent/README.md).
 
-Run `python run.py --help` to view this documentation on the command line.
+> [!TIP]
+> Run `python run.py --help` to view the most up-to-date documentation of the arguments.
 
 #### Optional Arguments
 * `-h, --help`: Show the help message and exit.
@@ -33,7 +35,9 @@ These arguments are related to the environment configuration:
 * `--noverbose, --verbose`: Enable verbose output. Default is False.
 * `--timeout <int>`: Timeout in seconds. Default is 35.
 * `--container_name <str>` 💡: Name of the Docker container if you would like to create a persistent container. Optional.
-> ⚠️ If you specify a container name, do not run multiple instances of `run.py` with the same container name!
+
+> [!WARNING]
+> If you specify a container name, do not run multiple instances of `run.py` with the same container name!
 
 #### AgentArguments
 Configure agent behavior:

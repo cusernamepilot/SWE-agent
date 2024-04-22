@@ -3,7 +3,7 @@ dependencies:
   - python=3.9
   - pip
   - pip:
-    - anthropic
+    - anthropic[bedrock]
     - config
     - datasets
     - docker
@@ -19,3 +19,4 @@ dependencies:
     - simple-parsing
     - together
     - ollama
+    - rich-argparse
